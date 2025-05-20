@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  --border-color: 200, 200, 200;
+}
+
+body {
+  background: rgb(var(--background-rgb));
+  color: rgb(var(--foreground-rgb));
+}
+
+@media print {
+  @page {
+    margin: 0;
+    size: letter;
+  }
+
+  body {
+    background: white !important;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .full-width-print {
+    width: 100% !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+  }
+
+  .print-date,
+  .print-id,
+  .date-input {
+    font-size: 0.6rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .page {
+    width: 8.5in;
+    height: 11in;
+    padding: 0.5in;
+    margin: 0 auto;
+    box-shadow: none !important;
+  }
+}
+
+.medical-card {
+  font-family: Arial, sans-serif;
+  border: 1px solid #000;
+  background: white;
+  width: 100%;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.medical-card-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.medical-card input,
+.medical-card select {
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  padding: 0.125rem 0;
+  font-size: 0.875rem;
+  background: transparent;
+  width: 100%;
+}
+
+.medical-card input:focus,
+.medical-card select:focus {
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+
+.medical-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  table-layout: fixed;
+}
+
+.medical-card table th,
+.medical-card table td {
+  border: 1px solid #000;
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 0.65rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+.medical-card table th {
+  background: white;
+  font-weight: normal;
+}
+
+.medical-card-field {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.medical-card-field label {
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.compact-field {
+  width: auto;
+  min-width: 60px;
+}
+
+.print-only {
+  display: none;
+}
+
+.date-button {
+  height: 1.5rem !important;
+  padding: 0 0.5rem !important;
+  font-size: 0.65rem !important;
+  min-height: 0 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.date-cell {
+  padding: 2px !important;
+}
+
+.date-input {
+  font-size: 0.65rem !important;
+  text-align: center;
+  padding: 0 !important;
+}
+
+/* Estilos mejorados para el calendario */
+.rdp {
+  --rdp-cell-size: 35px;
+  --rdp-accent-color: #3b82f6;
+  --rdp-background-color: #eef6ff;
+}
+
+.rdp-dropdown {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 2px;
+  z-index: 10000;
+}
+
+.rdp-caption_dropdowns {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rdp-nav_button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rdp-head {
+  font-size: 0.75rem;
+}
+
+.rdp-day {
+  font-size: 0.75rem;
+  height: 35px;
+  width: 35px;
+}
+
+.rdp-day_selected {
+  background-color: var(--rdp-accent-color) !important;
+  color: white !important;
+}
